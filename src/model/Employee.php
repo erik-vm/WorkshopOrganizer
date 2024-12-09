@@ -10,15 +10,8 @@ class Employee
 
     private string $picture;
 
-    /**
-     * @param int $id
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $email
-     * @param string $position
-     * @param string $picture
-     */
-    public function __construct(int $id, string $firstName, string $lastName, string $email, string $position, string $picture)
+
+    public function __construct(int $id, string $firstName, string $lastName, string $email, string $position, ?string $picture = null)
     {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -26,5 +19,10 @@ class Employee
         $this->email = $email;
         $this->position = $position;
         $this->picture = $picture;
+    }
+
+    public function __toString(): string
+    {
+        return "$this->firstName $this->lastName";
     }
 }

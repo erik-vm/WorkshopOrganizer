@@ -8,7 +8,7 @@ CREATE TABLE task
     task_id     INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     description VARCHAR(255),
     assigned_to INT,
-    compleated  BOOLEAN
+    completed  BOOLEAN
 );
 
 CREATE TABLE employee
